@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PauseSpring</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="mui-paper">
+    <div class="mui-header">
+      <span class="mui-avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      </span>
+      <div class="mui-header-text">
+        <h1>PauseSpring</h1>
+        <p>Pause video on tab / window switch</p>
+      </div>
+      <label class="mui-switch" title="Enable / disable">
+        <input type="checkbox" id="enabled" checked />
+        <span class="mui-switch-track"><span class="mui-switch-thumb"></span></span>
+      </label>
+    </div>
+
+    <div class="mui-divider"></div>
+
+    <div class="mui-section">
+      <p class="mui-section-title">Pause when</p>
+
+      <label class="mui-radio-row">
+        <input type="radio" name="mode" value="both" checked />
+        <span class="mui-radio"></span>
+        <span class="mui-radio-text"><strong>Tab + Window</strong><em>Switching tabs or windows / apps</em></span>
+      </label>
+
+      <label class="mui-radio-row">
+        <input type="radio" name="mode" value="tab" />
+        <span class="mui-radio"></span>
+        <span class="mui-radio-text"><strong>Tab only</strong><em>Switching tabs in the same window</em></span>
+      </label>
+
+      <label class="mui-radio-row">
+        <input type="radio" name="mode" value="window" />
+        <span class="mui-radio"></span>
+        <span class="mui-radio-text"><strong>Window only</strong><em>Switching windows or apps</em></span>
+      </label>
+    </div>
+
+    <div class="mui-divider"></div>
+
+    <div class="mui-row">
+      <div class="mui-row-text">
+        <span class="mui-row-title">Auto-resume on return</span>
+        <span class="mui-row-sub">Replay video when you come back</span>
+      </div>
+      <label class="mui-switch" title="Auto-resume">
+        <input type="checkbox" id="autoResume" checked />
+        <span class="mui-switch-track"><span class="mui-switch-thumb"></span></span>
+      </label>
+    </div>
+
+    <div class="mui-row">
+      <div class="mui-row-text">
+        <span class="mui-row-title">Pause when I type</span>
+        <span class="mui-row-sub">Pause video when typing in text fields</span>
+      </div>
+      <label class="mui-switch" title="Pause when typing">
+        <input type="checkbox" id="pauseOnTyping" />
+        <span class="mui-switch-track"><span class="mui-switch-thumb"></span></span>
+      </label>
+    </div>
+
+    <div class="mui-footer">
+      <button type="button" class="mui-link" id="privacyLink">Privacy Policy</button>
+    </div>
+
+    <div class="mui-overlay" id="privacyOverlay" hidden>
+      <div class="mui-overlay-header">
+        <span>Privacy Policy</span>
+        <button type="button" class="mui-close" id="privacyClose" aria-label="Close">×</button>
+      </div>
+      <div class="mui-overlay-body">
+        <p>PauseSpring collects nothing. No accounts, no analytics, no tracking, no network requests.</p>
+        <p class="mui-body-title">On your device only</p>
+        <p>Your settings are saved in the browser and never sent anywhere.</p>
+        <p class="mui-body-title">Typing and page content</p>
+        <p>Typing detection runs locally to trigger a pause and is immediately discarded. Page content is never read or transmitted.</p>
+        <p class="mui-body-title">Permissions</p>
+        <p>Tabs: detect tab switches. Storage: save settings. All URLs: run the pauser on any site, including embeds.</p>
+        <p>Full policy: github.com/projectsbyayush/pause-spring/blob/main/PRIVACY.md</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
